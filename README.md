@@ -1,5 +1,5 @@
 # MorseCodeDecoder
-This is a morse code translator given that in a sentence, words are known but the words are not distinctive. Script finds all meaningful words among all possible combinations where the definition of "meaningful" is provided by  a list of words in English. Words list is taken from dwyl/english-words as you may find in the following link https://github.com/dwyl/english-words
+This is a morse code translator given that in a sentence, words are known but the letters are not distinctive. Script finds all meaningful words among all possible combinations where the definition of "meaningful" is provided by  a list of words in English. Words list is taken from dwyl/english-words as you may find in the following link https://github.com/dwyl/english-words
 
 #Usage
 
