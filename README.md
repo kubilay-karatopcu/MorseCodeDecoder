@@ -3,4 +3,4 @@ This is a morse code translator given that in a sentence, words are known but th
 
 #Usage
 
-translateSentence() function takes a sentence(str) in the form of mors words seperated by single spaces(" "), and returns all possible translations of each word. 
+translateSentence() function takes a sentence(str) in the form of morse words seperated by single spaces(" "), and returns all possible translations of each word. 
