@@ -55,7 +55,9 @@ translationInLatin = MorseCodeDecoder().translateSentence(sentence, type = "Mors
 
 It returns "HELLO WORLD!"
 ## Translation From Morse where letters are not seperate.
-sentence = "......-...-..---/.-----.-..-..-..-.-.--"
+sentence = "../-...-...---/-.-----..-/....-..-.-.--/-...--.....-/--......../-.-----..-.-./...---..-.-.."
+morseDecoder.translateSentence(sentence, type = "MorseToLatin", words = "Indistinctive")
+It returns a dictionary showing all meaningfull possibilities for each word.
 
 ## Making the sound of Morse from Latin
 sentence = "Hello world"
