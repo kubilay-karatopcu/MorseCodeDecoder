@@ -1,4 +1,4 @@
-from itertools import combinations
+from itertools import combinations, chain
 import json
 import winsound
 from MorseSoundMaker import MorseSoundMaker
@@ -78,25 +78,27 @@ class MorseDecoder:
             All possible words which is meaningful or not in Latin.
         """
         morsDict = self.morsCodeCombs(word)
+        def translator(word):
+            curWordListed = word.split("/")
+            curWordTranslated = ""
+            flag = 0
+            for elm in curWordListed:
+                try:
+                    latinLetter = self.MORSE_CODE_DICT[elm]
+                    curWordTranslated += latinLetter
+                except:
+                    flag = 1
+                    continue
+            if flag == 1:
+                flag = 0
+                return False
+            else:
+                return curWordTranslated
         allTranslations = []
         for index, word_list in morsDict.items():
-            for word in word_list:
-                curWordListed = word.split("/")
-                curWordTranslated = ""
-                flag = 0
-                for elm in curWordListed:
-                    try:
-                        latinLetter = self.MORSE_CODE_DICT[elm]
-                        curWordTranslated += latinLetter
-                    except:
-                        flag = 1
-                        continue
-                if flag == 1:
-                    flag = 0
-                    continue
-                else:
-                    allTranslations.append(curWordTranslated)
-        return allTranslations
+            curTranslations = list(filter(lambda x: x != False, list(map(translator, word_list))))
+            allTranslations.append(curTranslations)
+        return list(chain(*allTranslations))
 
     def meaningfulTranslations(self, word):
         """
@@ -208,3 +210,5 @@ class MorseDecoder:
         if filepath[-4:] != ".wav":
             filepath += ".wav"
         self.MorseSoundMaker.makeSound(morseCode, filepath)
+morseDecoder  = MorseDecoder()
+print(morseDecoder.translateSentence("../-...-...---/-.-----..-/....-..-.-.--/-...--.....-/--......../-.-----..-.-./...---..-.-..", type = "MorseToLatin", words = "Indistinctive"))
