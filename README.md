@@ -7,10 +7,9 @@ This is a Morse code translator which can be used for several utilities about Mo
 
 ## translateSentence()
 
-    This is the master method which makes the translation between Latin and Morse.
+This is the master method which makes the translation between Latin and Morse.
 
 ### Parameters
-### ----------
     sentence : str
         The sentence that is needed to be translated.
     type : str -> ['LatinToMorse','MorseToLatin']
@@ -30,7 +29,6 @@ This is a Morse code translator which can be used for several utilities about Mo
         If "words" is "Indistinctive" then the sentence must be given in the
         form where words are seperated with "/" but letters must be joint.
 ### Returns
-### -------
     type = LatinToMorse
         str
             Translation in Morse. The sentence is in the form where letters
@@ -46,9 +44,9 @@ This is a Morse code translator which can be used for several utilities about Mo
         
    This method creates a .wav file of Morse from a Latin word.
 ### Parameters
-### ----------
-        sentence : str
-            Regular English sentence which is seperated with spaces.
-        filepath : str
-            File path where the .wav will be saved.
-                See examples.py for furthermore.
+
+    sentence : str
+        Regular English sentence which is seperated with spaces.
+    filepath : str
+        File path where the .wav will be saved.
+            See examples.py for furthermore.
