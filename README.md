@@ -2,7 +2,7 @@
 
 This is a Morse code translator which can be used for several utilities about Morse code such as translation between Latin and Morse,  translation from Latin to its Morse code sound, and translation from Morse code where words are seperate but letters are indistincive in which script finds all meaningful words among all possible combinations where the definition of "meaningful" is provided by  a list of words in English. Words list is taken from dwyl/english-words as you may find in the following link https://github.com/dwyl/english-words
 
-#How to use?
+How to use?
 translateSentence(sentence, type, words)
 This is the master method which makes the translation between Latin and Morse.
 Parameters
