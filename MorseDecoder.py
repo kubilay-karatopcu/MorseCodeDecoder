@@ -210,5 +210,3 @@ class MorseDecoder:
         if filepath[-4:] != ".wav":
             filepath += ".wav"
         self.MorseSoundMaker.makeSound(morseCode, filepath)
-morseDecoder  = MorseDecoder()
-print(morseDecoder.translateSentence("../-...-...---/-.-----..-/....-..-.-.--/-...--.....-/--......../-.-----..-.-./...---..-.-..", type = "MorseToLatin", words = "Indistinctive"))
