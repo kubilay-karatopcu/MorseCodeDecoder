@@ -14,32 +14,26 @@ This is the master method which makes the translation between Latin and Morse.
         The sentence that is needed to be translated.
     type : str -> ['LatinToMorse','MorseToLatin']
         Translation type.
-        If the translation "type" is "LatinToMorse" then the sentence must be given
-        in the form of space seperated words.
-        If the translation "type" is "MorseToLatin" then the sentence must be given
-        in the form where letters are seperated with spaces and the words are
-        seperated with "/"
+        If the translation "type" is "LatinToMorse" then the sentence must be given in the form of space seperated words.
+        If the translation "type" is "MorseToLatin" then the sentence must be given in the form where letters are seperated 
+        with spaces and the words are seperated with "/".
     words : str -> ['Distinctive','Indistinctive']
-        It shows whether letters are seperated and known or the words are
-        seperated but  the letters are not known.
-        It is needed to be defined if translation type is MorseToLatin.
-        If "words" is "Distinctive" then the sentence must be given in the
-        form where letters are seperated with spaces and the words are
-        seperated with "/"
-        If "words" is "Indistinctive" then the sentence must be given in the
-        form where words are seperated with "/" but letters must be joint.
+        It shows whether letters are seperated and known or the words are seperated but  the letters are not known.
+        It is needed to be defined if translation type is MorseToLatin. If "words" is "Distinctive" then the sentence 
+        must be given in the form where letters are seperated with spaces and the words are seperated with "/".       
+        If "words" is "Indistinctive" then the sentence must be given in the form where words are seperated with "/" but 
+        letters must be joint.
 ### Returns
     type = LatinToMorse
         str
-            Translation in Morse. The sentence is in the form where letters
-            are seperated with spaces and the words are seperated with "/"
+            Translation in Morse. The sentence is in the form where letters are seperated with spaces and the words 
+            are seperated with "/"
     type = MorseToLatin & words = Distinctive
         str
             Translation in Latin. Regular English sentence.
     type = MorseToLatin & words = Indistinctive
         dictionary
-            A dictionary where keys are the words in Morse, and values are
-            all possible meaningful translations in Latin.
+            A dictionary where keys are the words in Morse, and values are all possible meaningful translations in Latin.
 ## createMorseCodeSound()
         
    This method creates a .wav file of Morse from a Latin word.
