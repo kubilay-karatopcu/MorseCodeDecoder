@@ -43,4 +43,23 @@ This is the master method which makes the translation between Latin and Morse.
         Regular English sentence which is seperated with spaces.
     filepath : str
         File path where the .wav will be saved.
-            See examples.py for furthermore.
+# Examples
+## Translation From Latin to Morse
+sentence = "Hello world!"
+translationInMorse = MorseCodeDecoder().translateSentence(sentence, type = "LatinToMorse")  
+
+It returns ".... . .-.. .-.. ---/.-- --- .-. .-.. -.. -.-.--"
+## Translation From Morse to Latin
+sentence = ".... . .-.. .-.. ---/.-- --- .-. .-.. -.. -.-.--"
+translationInLatin = MorseCodeDecoder().translateSentence(sentence, type = "MorseToLatin") 
+
+It returns "HELLO WORLD!"
+## Translation From Morse where letters are not seperate.
+sentence = "......-...-..---/.-----.-..-..-..-.-.--"
+
+## Making the sound of Morse from Latin
+sentence = "Hello world"
+MorseCodeDecoder().createMorseCodeSound(sentence, filepath = "Sounds//Helloworld")
+
+Saves "Helloworld.wav" file into the given path
+
