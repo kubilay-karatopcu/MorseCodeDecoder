@@ -208,13 +208,3 @@ class MorseDecoder:
         if filepath[-4:] != ".wav":
             filepath += ".wav"
         self.MorseSoundMaker.makeSound(morseCode, filepath)
-
-
-morseDecoder = MorseDecoder()
-sentence = "I am Kubilay"
-print(morseDecoder.translateSentence(sentence, type = "LatinToMorse"))
-IamKubilay = morseDecoder.translateSentence(sentence, type = "LatinToMorse")
-print(morseDecoder.translateSentence(IamKubilay, type = "MorseToLatin", words = "Distinctive"))
-print(sentence.upper() == morseDecoder.translateSentence(IamKubilay, type = "MorseToLatin", words = "Distinctive"))
-print(morseDecoder.translateSentence("../.---", type = "MorseToLatin",words = "Indistinctive"))
-morseDecoder.createMorseCodeSound(sentence,filepath = "IamKubilay.wav")
